@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="catch_.me_.if_.you_.can_">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 查看网络连接 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 此应用可显示在其他应用上方 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER"/>
+    <!-- 修改或删除您的USB存储设备中的内容 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:hardwareAccelerated="true">
+        <activity
+            android:label="@string/app_short_name"
+            android:name="catch_.me_.if_.you_.can_.Main"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN"/>
+                <category
+                    android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+    <instrumentation
+        android:label="Instrumentation"
+        android:name="catch_.me_.if_.you_.can_.Instrumentation"
+        android:targetPackage="catch_.me_.if_.you_.can_"/>
+
+</manifest>
